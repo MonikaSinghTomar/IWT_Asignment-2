@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment Form</title>
+</head>
+<body bgcolor="lightgrey">
+    <form action="get">
+        <h1>Payment Form</h1>
+        <p>Name: <input type="text"  name="name" required></p><br>
+        <label>Gender </label>
+        <p>
+            Male <input type="radio" name="gender" id="male" required>
+            Female <input type="radio" name="gender" id="female"  required>
+        </p>
+       <p>Email:  <input type="email" name="email" id="email" required></p>
+        <p>Address: <textarea name="address" id="address"></textarea></p>
+        <p>Pincode:  <input type="number" name="pincode" id="pincode" required></p>
+         <br>
+        <h2>Payment Information</h2>
+        <p>Card Type:
+            <select name="card_type" id="card_type" required>
+                <option value="">--Select a card type--</option>
+                <option value="rupay">Rupay</option>
+                <option value="mastercard">Mastercard</option>
+            </select>
+        </p>
+        <p>
+            Card Number <input type="number" name="card_number" id="card_number" required>
+        </p>
+        <input type="submit" value="payment">
+    </form>
+</body>
+</html>

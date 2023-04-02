@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            CLOCK
+        </title>
+        <style>
+            body{
+            background-image: url("image/40.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: repeat-y,no-repeat;
+          }
+            div{
+                font-size: 100px;
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: brown;
+                background-color: aqua;
+
+            }
+            p{
+                background-color: blueviolet;
+                font-size:50px;
+                height: 10%;
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <P>
+            clock
+        </P>
+        <div id="clock">
+        <script type="text/javascript">
+            function clock(){
+                d=new Date();
+            hh=d.getHours();
+            mm=d.getMinutes();
+            ss=d.getSeconds();
+            var session="AM";
+                if(hh>12)
+                {
+                  hh=hh-12;
+                }
+                if(hh>=12)
+                {
+                    session="PM";
+                }
+            
+            ctime=hh+":"+mm+":"+ss+ " "+session;
+            block=document.getElementById('clock');
+            block.innerHTML=ctime;
+            }
+            
+            setInterval(clock,1000);
+        </script>
+        </div>
+       
+    </body>
+</html>
